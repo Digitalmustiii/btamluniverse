@@ -1,26 +1,30 @@
 @import "tailwindcss";
+/* Add this to your globals.css file */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Page transition styles */
+.page-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.page-transition.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Optional: Add a subtle backdrop fade-in for extra polish */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff; /* Adjust to match your site's background */
+  transition: background-color 0.3s ease;
+}
+
+/* Ensure smooth transitions don't interfere with other animations */
+* {
+  box-sizing: border-box;
+}
+
+/* Optional: Prevent flash of unstyled content */
+#main-layout {
+  min-height: 100vh;
 }

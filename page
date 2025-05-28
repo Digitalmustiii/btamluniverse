@@ -1,0 +1,47 @@
+app/
+├── admin/
+│   ├── login/
+│   │   └── page.tsx
+│   ├── dashboard/
+│   │   └── page.tsx
+│   ├── africa/
+│   │   ├── page.tsx
+│   │   ├── create/
+│   │   │   └── page.tsx
+│   │   └── edit/
+│   │       └── [id]/
+│   │           └── page.tsx
+│   ├── business/
+│   │   ├── page.tsx
+│   │   ├── create/
+│   │   │   └── page.tsx
+│   │   └── edit/
+│   │       └── [id]/
+│   │           └── page.tsx
+│   ├── scholarship/
+│   │   ├── page.tsx
+│   │   ├── create/
+│   │   │   └── page.tsx
+│   │   └── edit/
+│   │       └── [id]/
+│   │           └── page.tsx
+│   └── security/
+│       ├── page.tsx
+│       ├── create/
+│       │   └── page.tsx
+│       └── edit/
+│           └── [id]/
+│               └── page.tsx
+├── article/
+│   └── [slug]/
+│       └── page.tsx
+components/
+├── admin/
+│   ├── AdminLayout.tsx
+│   ├── RichTextEditor.tsx
+│   └── ImageUpload.tsx
+└── ...
+lib/
+├── supabaseClient.ts
+└── adminAuth.ts
+

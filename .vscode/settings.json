@@ -1,0 +1,4 @@
+{
+  // don’t try to download JSON schemas from the internet
+  "json.schemaDownload.enable": false
+}
