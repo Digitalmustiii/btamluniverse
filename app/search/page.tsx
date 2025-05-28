@@ -1,5 +1,5 @@
-export const dynamic = 'force-dynamic'
-import React, { useState, useEffect, useCallback } from 'react'
+'use client'
+import React, { useState, useEffect, useCallback, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -56,7 +56,8 @@ const AFRICAN_REGIONS = ['Eastern Africa', 'Western Africa', 'Central Africa', '
 const BUSINESS_CATEGORIES = ['Agriculture & Agribusiness', 'Mining & Energy', 'Technology & Fintech', 'Infrastructure & Logistics', 'Sustainable Business Practices', 'Market Entry Strategies', 'Risk Management', 'Market Trends & Analysis', 'Emerging Industries', 'Case Studies']
 const SECURITY_CATEGORIES = ['Security Advisories', 'Threat Intelligence', 'Risk Mitigation', 'Best Practices']
 
-const SearchPage = () => {
+// Separate component for search functionality
+const SearchContent = () => {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [query, setQuery] = useState('')
@@ -468,6 +469,26 @@ const SearchPage = () => {
         )}
       </div>
     </div>
+  )
+}
+
+// Loading component for Suspense fallback
+const SearchLoadingFallback = () => (
+  <div className="min-h-screen bg-gray-50">
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="flex justify-center py-12">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
+      </div>
+    </div>
+  </div>
+)
+
+// Main component with Suspense wrapper
+const SearchPage = () => {
+  return (
+    <Suspense fallback={<SearchLoadingFallback />}>
+      <SearchContent />
+    </Suspense>
   )
 }
 
