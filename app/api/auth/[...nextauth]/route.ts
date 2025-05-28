@@ -1,9 +1,8 @@
 // app/api/auth/[...nextauth]/route.ts
-import NextAuth, { NextAuthOptions } from 'next-auth';
+import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { User } from 'next-auth';
 
-export const authOptions: NextAuthOptions = {
+const handler = NextAuth({
   secret: process.env.NEXTAUTH_SECRET!,
   providers: [
     CredentialsProvider({
@@ -12,7 +11,7 @@ export const authOptions: NextAuthOptions = {
         username: { label: 'Username', type: 'text', placeholder: 'Digitalmustiii' },
         password: { label: 'Password', type: 'password' },
       },
-      async authorize(credentials): Promise<User | null> {
+      async authorize(credentials) {
         const adminUsername = process.env.ADMIN_USER!;
         const adminPassword = process.env.ADMIN_PASS!;
 
@@ -36,7 +35,6 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
-};
+});
 
-const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
