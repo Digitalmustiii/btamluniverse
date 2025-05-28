@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import { User, Camera, Edit3, Save, X, LogOut, ArrowLeft, Eye, EyeOff } from 'lucide-react'
 import { supabase } from '../../../lib/supabaseClient'
 
@@ -336,7 +337,14 @@ export default function Profile() {
               <div className="relative inline-block mb-4">
                 <div className="w-24 h-24 bg-gradient-to-br from-[#0F4007] to-[#1a6b0f] rounded-full flex items-center justify-center text-white overflow-hidden">
                   {user.avatar_url ? (
-                    <img src={user.avatar_url} alt="Avatar" className="w-full h-full object-cover" />
+                    <Image 
+                      src={user.avatar_url} 
+                      alt="User Avatar" 
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover rounded-full"
+                      priority
+                    />
                   ) : (
                     <User size={32} />
                   )}
