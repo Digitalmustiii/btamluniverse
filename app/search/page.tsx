@@ -44,7 +44,7 @@ interface SearchResults {
 
 const SEARCH_KEYWORDS = {
   continents: ['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania'],
-  scholarshipTypes: ['Undergraduate', 'Masters', 'PhD', 'Language Program', 'Research Fellowship', 'Exchange Program', 'Professional Development', 'Certificate Program', 'Summer Program', 'General Scholarship'],
+  scholarshipTypes: ['Undergraduate', 'Masters', 'PhD', 'Language Program', 'Research Fellowship', 'Exchange Program', 'Professional Development', 'Certificate Program', 'Summer Program', 'General Scholarship','School'],
   fundingTypes: ['Fully Funded', 'Partial Funding', 'Tuition Only', 'Living Expenses Only', 'Travel Grant', 'Research Grant', 'Merit-Based', 'Need-Based'],
   securityLevels: ['Low', 'Medium', 'High', 'Critical'],
   africanCountries: ['Algeria', 'Angola', 'Benin', 'Botswana', 'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cameroon', 'Central African Republic', 'Chad', 'Comoros', 'Democratic Republic of the Congo', 'Djibouti', 'Egypt', 'Equatorial Guinea', 'Eritrea', 'Eswatini', 'Ethiopia', 'Gabon', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Ivory Coast', 'Kenya', 'Lesotho', 'Liberia', 'Libya', 'Madagascar', 'Malawi', 'Mali', 'Mauritania', 'Mauritius', 'Morocco', 'Mozambique', 'Namibia', 'Niger', 'Nigeria', 'Republic of the Congo', 'Rwanda', 'São Tomé and Príncipe', 'Senegal', 'Seychelles', 'Sierra Leone', 'Somalia', 'South Africa', 'South Sudan', 'Sudan', 'Tanzania', 'Togo', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe'],
@@ -55,6 +55,41 @@ const SEARCH_KEYWORDS = {
 const AFRICAN_REGIONS = ['Eastern Africa', 'Western Africa', 'Central Africa', 'Northern Africa', 'Southern Africa']
 const BUSINESS_CATEGORIES = ['Agriculture & Agribusiness', 'Mining & Energy', 'Technology & Fintech', 'Infrastructure & Logistics', 'Sustainable Business Practices', 'Market Entry Strategies', 'Risk Management', 'Market Trends & Analysis', 'Emerging Industries', 'Case Studies']
 const SECURITY_CATEGORIES = ['Security Advisories', 'Threat Intelligence', 'Risk Mitigation', 'Best Practices']
+
+// URL mapping functions
+const getCategoryUrl = (category: string, type: string): string => {
+  switch (type) {
+    case 'regional':
+      switch (category) {
+        case 'Eastern Africa': return '/africa/eastern'
+        case 'Western Africa': return '/africa/western'
+        case 'Central Africa': return '/africa/central'
+        case 'Northern Africa': return '/africa/northern'
+        case 'Southern Africa': return '/africa/southern'
+        default: return '/africa/eastern'
+      }
+    case 'business':
+      switch (category) {
+        case 'Agriculture & Agribusiness': return '/business/agriculture-agribusiness'
+        case 'Mining & Energy': return '/business/mining-energy'
+        case 'Technology & Fintech': return '/business/technology-fintech'
+        case 'Infrastructure & Logistics': return '/business/infrastructure-logistics'
+        case 'Sustainable Business Practices': return '/business/sustainable-business-practices'
+        case 'Market Entry Strategies': return '/business/market-entry-strategies'
+        case 'Risk Management': return '/business/risk-management'
+        case 'Market Trends & Analysis': return '/business/market-trends-analysis'
+        case 'Emerging Industries': return '/business/emerging-industries'
+        case 'Case Studies': return '/business/case-studies'
+        default: return '/business/agriculture-agribusiness'
+      }
+    case 'scholarship':
+      return '/scholarship'
+    case 'security':
+      return '/security'
+    default:
+      return '/'
+  }
+}
 
 // Separate component for search functionality
 const SearchContent = () => {
@@ -223,13 +258,7 @@ const SearchContent = () => {
     }
 
     const getUrl = () => {
-      switch (type) {
-        case 'regional': return `/africa/article/${article.id}`
-        case 'business': return `/business/article/${article.id}`
-        case 'scholarship': return `/scholarship/${article.id}`
-        case 'security': return `/security/${article.id}`
-        default: return `/article/${article.id}`
-      }
+      return getCategoryUrl(article.category, type)
     }
 
     const getBadgeColor = () => {
@@ -239,6 +268,16 @@ const SearchContent = () => {
         case 'scholarship': return 'bg-purple-100 text-purple-800'
         case 'security': return 'bg-red-100 text-red-800'
         default: return 'bg-gray-100 text-gray-800'
+      }
+    }
+
+    const getCategoryDisplayName = () => {
+      switch (type) {
+        case 'regional': return article.category.replace(' Africa', '')
+        case 'business': return article.category.replace(' & ', ' ')
+        case 'scholarship': return 'Scholarship'
+        case 'security': return 'Security'
+        default: return article.category
       }
     }
 
@@ -268,7 +307,7 @@ const SearchContent = () => {
             </Link>
             <div className="flex items-center justify-between text-sm">
               <span className={`px-2 py-1 rounded-full text-xs font-medium ${getBadgeColor()}`}>
-                {type.charAt(0).toUpperCase() + type.slice(1)}
+                {getCategoryDisplayName()}
               </span>
               <div className="flex items-center text-gray-500">
                 <Calendar className="w-3 h-3 mr-1" />

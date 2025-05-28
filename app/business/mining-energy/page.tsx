@@ -138,7 +138,7 @@ export default function MiningEnergyPage() {
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <button
             onClick={() => setSelectedArticle(null)}
-            className="flex items-center gap-2 text-amber-700 hover:text-amber-800 mb-8 transition-colors duration-200"
+            className="flex items-center gap-2 text-from-[#0F4007] to-[#1a6b0f] hover:text-from-[#0F4007] mb-8 transition-colors duration-200"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Mining & Energy News
@@ -156,7 +156,7 @@ export default function MiningEnergyPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <span className="px-3 py-1 bg-amber-600 rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-from-[#0F4007] to-[#1a6b0f] rounded-full text-sm font-medium">
                   {selectedArticle.country}
                 </span>
               </div>
@@ -214,25 +214,25 @@ export default function MiningEnergyPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight
-              bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+              bg-gradient-to-r from-[#0F4007] to-[#1a6b0f] bg-clip-text text-transparent">
             Mining & Energy News
           </h1>
           <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-6">
             Comprehensive coverage of Africa&apos;s mining sector, energy infrastructure, renewable energy projects, 
             and natural resource developments across the continent.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#0F4007] to-[#1a6b0f]mx-auto rounded-full"></div>
         </div>
 
         {loading ? (
           <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-from-[#0F4007] to-[#1a6b0f]"></div>
           </div>
         ) : error ? (
           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12">
             <div className="text-center">
               <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-8">
-                <svg className="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-10 h-10 text-from-[#0F4007] to-[#1a6b0f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -240,7 +240,7 @@ export default function MiningEnergyPage() {
               <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">{error}</p>
               <button
                 onClick={loadArticles}
-                className="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors duration-200"
+                className="inline-flex items-center px-6 py-3 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded-lg hover:bg-from-[#0F4007]- duration-200"
               >
                 Try Again
               </button>
@@ -249,7 +249,7 @@ export default function MiningEnergyPage() {
         ) : articles.length === 0 ? (
           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12">
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-8">
+              <div className="w-20 h-20 bg-gradient-to-br from-from-[#0F4007] to-[#1a6b0f] - rounded-full flex items-center justify-center mx-auto mb-8">
                 <Zap className="w-10 h-10 text-white" />
               </div>
               
@@ -265,7 +265,7 @@ export default function MiningEnergyPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
                 <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f] rounded-full mr-3"></span>
                     Mining Operations
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -275,7 +275,7 @@ export default function MiningEnergyPage() {
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f]rounded-full mr-3"></span>
                     Renewable Energy
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -285,7 +285,7 @@ export default function MiningEnergyPage() {
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f] rounded-full mr-3"></span>
                     Oil & Gas
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -295,7 +295,7 @@ export default function MiningEnergyPage() {
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f] rounded-full mr-3"></span>
                     Infrastructure
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -335,14 +335,14 @@ export default function MiningEnergyPage() {
                       onError={() => handleImageError(article.id)}
                     />
                     <div className="absolute top-2 left-2">
-                      <span className="px-2 py-1 bg-amber-600 text-white rounded text-xs font-medium">
+                      <span className="px-2 py-1 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded text-xs font-medium">
                         {article.country}
                       </span>
                     </div>
                   </div>
 
                   <div className="p-3">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-amber-600 transition-colors duration-200">
+                    <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-from-[#0F4007] to-[#1a6b0f] transition-colors duration-200">
                       {article.title}
                     </h3>
                     <div className="flex items-center justify-between text-xs text-gray-500">
@@ -371,14 +371,14 @@ export default function MiningEnergyPage() {
                       onError={() => handleImageError(article.id)}
                     />
                     <div className="absolute top-2 left-2">
-                      <span className="px-2 py-1 bg-amber-600 text-white rounded text-xs font-medium">
+                      <span className="px-2 py-1 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded text-xs font-medium">
                         {article.country}
                       </span>
                     </div>
                   </div>
 
                   <div className="p-4">
-                    <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2 group-hover:text-amber-600 transition-colors duration-200">
+                    <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2 group-hover:text-from-[#0F4007] to-[#1a6b0f] transition-colors duration-200">
                       {article.title}
                     </h3>
                     <div className="flex items-center justify-between text-xs text-gray-500">
@@ -401,12 +401,12 @@ export default function MiningEnergyPage() {
                   <div className="flex gap-3 p-3">
                     <div className="flex-1">
                       <div className="mb-2">
-                        <span className="px-2 py-1 bg-amber-600 text-white rounded text-xs font-medium">
+                        <span className="px-2 py-1 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded text-xs font-medium">
                           {article.country}
                         </span>
                       </div>
                       
-                      <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-amber-600 transition-colors duration-200">
+                      <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-from-[#0F4007] to-[#1a6b0f]transition-colors duration-200">
                         {article.title}
                       </h3>
 
@@ -433,7 +433,7 @@ export default function MiningEnergyPage() {
         )}
 
         {!loading && articles.length === 0 && (
-          <div className="mt-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-8 md:p-12 text-center">
+          <div className="mt-16 bg-gradient-to-r from-from-[#0F4007] to-[#1a6b0f] - rounded-2xl p-8 md:p-12 text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Stay Informed</h3>
             <p className="text-amber-100 text-lg mb-8 max-w-2xl mx-auto">
               Be the first to know when we launch our mining and energy news section. 
@@ -445,7 +445,7 @@ export default function MiningEnergyPage() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-full border-0 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-gray-800"
               />
-              <button className="bg-white text-orange-800 font-semibold px-6 py-3 rounded-full hover:bg-orange-50 transition-colors duration-200">
+              <button className="bg-white text-from-[#0F4007] to-[#1a6b0f] font-semibold px-6 py-3 rounded-full hover:bg-orange-50 transition-colors duration-200">
                 Notify Me
               </button>
             </div>

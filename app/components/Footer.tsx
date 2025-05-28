@@ -151,7 +151,8 @@ export default function Footer() {
                 </p>
                 
                 <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                  <div className="flex gap-3">
+                  {/* Mobile: Stack vertically, Desktop: Side by side */}
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <input
                       type="email"
                       value={email}
@@ -164,7 +165,7 @@ export default function Footer() {
                     <button
                       type="submit"
                       disabled={isLoading}
-                      className="flex items-center gap-2 px-6 py-3 bg-white text-green-800 rounded-xl font-semibold text-sm hover:bg-green-50 hover:scale-105 transition-all duration-300 shadow-lg group disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-green-800 rounded-xl font-semibold text-sm hover:bg-green-50 hover:scale-105 transition-all duration-300 shadow-lg group disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 sm:flex-shrink-0"
                     >
                       {isLoading ? (
                         <>
@@ -303,7 +304,7 @@ export default function Footer() {
               </p>
               
               {/* Quick Links */}
-              <div className="flex items-center gap-6">
+              <div className="flex flex-wrap items-center justify-center sm:justify-end gap-4 sm:gap-6">
                 <Link 
                   href="/legal/privacy-policy" 
                   className="text-green-200 hover:text-white text-sm transition-colors duration-300"

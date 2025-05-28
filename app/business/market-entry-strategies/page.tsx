@@ -162,7 +162,7 @@ export default function MarketEntryStrategiesPage() {
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <button
             onClick={handleBackToList}
-            className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8 transition-colors duration-200"
+            className="flex items-center gap-2 text-from-[#0F4007] to-[#1a6b0f] hover:text-from-[#0F4007] mb-8 transition-colors duration-200"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Market Entry Strategies
@@ -180,7 +180,7 @@ export default function MarketEntryStrategiesPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <span className="px-3 py-1 bg-blue-600 rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-from-[#0F4007] to-[#1a6b0f] rounded-full text-sm font-medium">
                   {selectedArticle.country}
                 </span>
               </div>
@@ -239,11 +239,11 @@ export default function MarketEntryStrategiesPage() {
         {/* Page Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
-            <Target className="w-12 h-12 text-blue-600 mr-4" />
-            <TrendingUp className="w-10 h-10 text-blue-500" />
+            <Target className="w-12 h-12 text-from-[#0F4007] to-[#1a6b0f] mr-4" />
+            <TrendingUp className="w-10 h-10 text-from-[#0F4007] to-[#1a6b0f]" />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight
-              bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              bg-gradient-to-r from-from-[#0F4007] to-[#1a6b0f] bg-clip-text text-transparent">
             Market Entry Strategies
           </h1>
           <p className="text-gray-600 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-6">
@@ -251,19 +251,19 @@ export default function MarketEntryStrategiesPage() {
             regulatory frameworks, competitive analysis, and partnership opportunities across the continent. 
             Your gateway to successful business expansion in Africa.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r-from-[#0F4007] to-[#1a6b0f] mx-auto rounded-full"></div>
         </div>
 
         {loading ? (
           <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 from-[#0F4007] to-[#1a6b0f]"></div>
           </div>
         ) : error ? (
           /* Error State */
           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12">
             <div className="text-center">
               <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-8">
-                <svg className="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-10 h-10 text-from-[#0F4007] to-[#1a6b0f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -278,7 +278,7 @@ export default function MarketEntryStrategiesPage() {
               
               <button
                 onClick={loadArticles}
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                className="inline-flex items-center px-6 py-3 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded-lg hover:bg-from-[#0F4007] to-[#1a6b0f]transition-colors duration-200"
               >
                 Try Again
               </button>
@@ -288,7 +288,7 @@ export default function MarketEntryStrategiesPage() {
           /* No Articles Found */
           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12">
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-8">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#0F4007] to-[#1a6b0f] rounded-full flex items-center justify-center mx-auto mb-8">
                 <Globe className="w-10 h-10 text-white" />
               </div>
               
@@ -304,7 +304,7 @@ export default function MarketEntryStrategiesPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 shadow-sm border border-blue-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f] rounded-full mr-3"></span>
                     Regulatory Frameworks
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -324,7 +324,7 @@ export default function MarketEntryStrategiesPage() {
                 
                 <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-lg p-6 shadow-sm border border-purple-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f] rounded-full mr-3"></span>
                     Strategic Partnerships
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -334,7 +334,7 @@ export default function MarketEntryStrategiesPage() {
                 
                 <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg p-6 shadow-sm border border-orange-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f]rounded-full mr-3"></span>
                     Risk Assessment
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -349,7 +349,7 @@ export default function MarketEntryStrategiesPage() {
                   {AFRICA_REGIONS.map((region, index) => (
                     <div key={index} className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 border border-blue-100">
                       <div className="font-semibold text-gray-700 flex items-center">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                        <div className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f]rounded-full mr-2"></div>
                         {region}
                       </div>
                     </div>
@@ -357,7 +357,7 @@ export default function MarketEntryStrategiesPage() {
                 </div>
               </div>
 
-              <div className="mt-12 p-6 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl text-white">
+              <div className="mt-12 p-6 bg-gradient-to-r from-[#0F4007] to-[#1a6b0f]rounded-xl text-white">
                 <h3 className="text-lg font-semibold mb-2">Expert Market Intelligence</h3>
                 <p className="text-blue-100 text-sm">
                   Our team of market analysts, business consultants, and regional experts will provide 
@@ -386,7 +386,7 @@ export default function MarketEntryStrategiesPage() {
                       onError={() => handleImageError(article.id)}
                     />
                     <div className="absolute top-2 left-2">
-                      <span className="px-2 py-1 bg-blue-600 text-white rounded text-xs font-medium">
+                      <span className="px-2 py-1 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded text-xs font-medium">
                         {article.country}
                       </span>
                     </div>
@@ -423,14 +423,14 @@ export default function MarketEntryStrategiesPage() {
                       onError={() => handleImageError(article.id)}
                     />
                     <div className="absolute top-2 left-2">
-                      <span className="px-2 py-1 bg-blue-600 text-white rounded text-xs font-medium">
+                      <span className="px-2 py-1 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded text-xs font-medium">
                         {article.country}
                       </span>
                     </div>
                   </div>
 
                   <div className="p-4">
-                    <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
+                    <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2 group-hover:text-from-[#0F4007] to-[#1a6b0f] transition-colors duration-200">
                       {article.title}
                     </h3>
 
@@ -454,12 +454,12 @@ export default function MarketEntryStrategiesPage() {
                   <div className="flex gap-3 p-3">
                     <div className="flex-1">
                       <div className="mb-2">
-                        <span className="px-2 py-1 bg-blue-600 text-white rounded text-xs font-medium">
+                        <span className="px-2 py-1 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded text-xs font-medium">
                           {article.country}
                         </span>
                       </div>
                       
-                      <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-blue-600 transition-colors duration-200">
+                      <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-from-[#0F4007] to-[#1a6b0f] transition-colors duration-200">
                         {article.title}
                       </h3>
 
@@ -487,7 +487,7 @@ export default function MarketEntryStrategiesPage() {
 
         {/* Newsletter Signup - Only show when no articles */}
         {!loading && articles.length === 0 && (
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-center">
+          <div className="mt-16 bg-gradient-to-r from-[#0F4007] to-[#1a6b0f] rounded-2xl p-8 md:p-12 text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Stay Ahead of the Market
             </h3>
@@ -501,7 +501,7 @@ export default function MarketEntryStrategiesPage() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-full border-0 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-gray-800"
               />
-              <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full hover:bg-blue-50 transition-colors duration-200 shadow-lg">
+              <button className="bg-white text-from-[#0F4007] to-[#1a6b0f] font-semibold px-6 py-3 rounded-full hover:bg-blue-50 transition-colors duration-200 shadow-lg">
                 Get Updates
               </button>
             </div>

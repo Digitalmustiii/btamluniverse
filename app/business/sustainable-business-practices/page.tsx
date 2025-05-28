@@ -153,7 +153,7 @@ export default function SustainableBusinessPracticesPage() {
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <button
             onClick={handleBackToList}
-            className="flex items-center gap-2 text-green-700 hover:text-green-800 mb-8 transition-colors duration-200"
+            className="flex items-center gap-2 text-from-[#0F4007] to-[#1a6b0f] hover:text-from-[#0F4007] - mb-8 transition-colors duration-200"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Sustainable Business Practices
@@ -171,7 +171,7 @@ export default function SustainableBusinessPracticesPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <span className="px-3 py-1 bg-green-600 rounded-full text-sm font-medium flex items-center gap-2">
+                <span className="px-3 py-1 bg-from-[#0F4007] to-[#1a6b0f] rounded-full text-sm font-medium flex items-center gap-2">
                   <Leaf className="w-4 h-4" />
                   {selectedArticle.country}
                 </span>
@@ -231,9 +231,9 @@ export default function SustainableBusinessPracticesPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
-            <Leaf className="w-12 h-12 text-green-600 mr-4" />
+            <Leaf className="w-12 h-12 text-from-[#0F4007] to-[#1a6b0f] mr-4" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight
-                bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
+                bg-gradient-to-r from-[#0F4007] to-[#1a6b0f] bg-clip-text text-transparent">
               Sustainable Business Practices
             </h1>
           </div>
@@ -241,7 +241,7 @@ export default function SustainableBusinessPracticesPage() {
             Discover how African businesses are leading the charge in sustainability, environmental responsibility, 
             and green innovation across diverse industries and regions.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-green-800 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#0F4007] to-[#1a6b0f] - mx-auto rounded-full"></div>
         </div>
 
         {loading ? (
@@ -252,7 +252,7 @@ export default function SustainableBusinessPracticesPage() {
           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12">
             <div className="text-center">
               <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-8">
-                <svg className="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-10 h-10 text-from-[#0F4007] to-[#1a6b0f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -269,7 +269,7 @@ export default function SustainableBusinessPracticesPage() {
         ) : articles.length === 0 ? (
           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12">
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-8">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#0F4007] to-[#1a6b0f]rounded-full flex items-center justify-center mx-auto mb-8">
                 <Leaf className="w-10 h-10 text-white" />
               </div>
               
@@ -285,7 +285,7 @@ export default function SustainableBusinessPracticesPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
                 <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f] rounded-full mr-3"></span>
                     Green Technologies
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -295,7 +295,7 @@ export default function SustainableBusinessPracticesPage() {
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f] rounded-full mr-3"></span>
                     Corporate Responsibility
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -305,7 +305,7 @@ export default function SustainableBusinessPracticesPage() {
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f] rounded-full mr-3"></span>
                     Circular Economy
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -315,7 +315,7 @@ export default function SustainableBusinessPracticesPage() {
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
                   <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-from-[#0F4007] to-[#1a6b0f]rounded-full mr-3"></span>
                     Sustainable Finance
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -354,7 +354,7 @@ export default function SustainableBusinessPracticesPage() {
                       onError={() => handleImageError(article.id)}
                     />
                     <div className="absolute top-2 left-2">
-                      <span className="px-2 py-1 bg-green-600 text-white rounded text-xs font-medium flex items-center gap-1">
+                      <span className="px-2 py-1 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded text-xs font-medium flex items-center gap-1">
                         <Leaf className="w-3 h-3" />
                         {article.country}
                       </span>
@@ -362,7 +362,7 @@ export default function SustainableBusinessPracticesPage() {
                   </div>
 
                   <div className="p-3">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-green-600 transition-colors duration-200">
+                    <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-from-[#0F4007] to-[#1a6b0f] transition-colors duration-200">
                       {article.title}
                     </h3>
 
@@ -391,7 +391,7 @@ export default function SustainableBusinessPracticesPage() {
                       onError={() => handleImageError(article.id)}
                     />
                     <div className="absolute top-2 left-2">
-                      <span className="px-2 py-1 bg-green-600 text-white rounded text-xs font-medium flex items-center gap-1">
+                      <span className="px-2 py-1 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded text-xs font-medium flex items-center gap-1">
                         <Leaf className="w-3 h-3" />
                         {article.country}
                       </span>
@@ -399,7 +399,7 @@ export default function SustainableBusinessPracticesPage() {
                   </div>
 
                   <div className="p-4">
-                    <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2 group-hover:text-green-600 transition-colors duration-200">
+                    <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2 group-hover:text-from-[#0F4007] to-[#1a6b0f] transition-colors duration-200">
                       {article.title}
                     </h3>
 
@@ -422,13 +422,13 @@ export default function SustainableBusinessPracticesPage() {
                   <div className="flex gap-3 p-3">
                     <div className="flex-1">
                       <div className="mb-2">
-                        <span className="px-2 py-1 bg-green-600 text-white rounded text-xs font-medium flex items-center gap-1 w-fit">
+                        <span className="px-2 py-1 bg-from-[#0F4007] to-[#1a6b0f] text-white rounded text-xs font-medium flex items-center gap-1 w-fit">
                           <Leaf className="w-3 h-3" />
                           {article.country}
                         </span>
                       </div>
                       
-                      <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-green-600 transition-colors duration-200">
+                      <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-3 leading-tight group-hover:text-from-[#0F4007] to-[#1a6b0f] transition-colors duration-200">
                         {article.title}
                       </h3>
 
